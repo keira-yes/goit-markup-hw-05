@@ -122,6 +122,10 @@ address {
   font-style: normal;
 }
 
+input {
+  background-color: transparent;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -533,11 +537,11 @@ address {
 
 .footer-holder {
   display: flex;
-  gap: 120px;
 }
 
 .footer-info {
   max-width: 264px;
+  margin-right: auto;
   color: var(--color-light);
 }
 
@@ -549,12 +553,20 @@ address {
   margin-top: 16px;
 }
 
+.footer-social {
+  margin-left: 30px;
+}
+
 .footer-headline {
   margin-bottom: 16px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   color: var(--color-white);
+}
+
+.footer-subscribe {
+  margin-left: 80px;
 }
 
 /* Modal */
@@ -669,6 +681,10 @@ address {
   border-color: var(--color-primary);
 }
 
+.order-form-input::placeholder {
+  color: rgba(var(--color-dark), 0.4);
+}
+
 .order-form-icon {
   position: absolute;
   left: 16px;
@@ -745,4 +761,41 @@ input[type='checkbox']:checked
   display: block;
   min-width: 169px;
   margin: 0 auto;
+}
+
+/* Subscribe Form */
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+
+.subscribe-form-input {
+  width: 264px;
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(var(--color-black), 0.15);
+  font-size: 12px;
+  letter-spacing: var(--letter-spacing-lg);
+  color: var(--color-white);
+  transition: var(--transition-fast);
+  transition-property: border-color;
+  outline: none;
+}
+
+.subscribe-form-input:focus {
+  border-color: var(--color-primary);
+}
+
+.subscribe-form-input::placeholder {
+  color: var(--color-white);
+}
+
+.subscribe-form-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 24px;
+  box-shadow: none;
 }
